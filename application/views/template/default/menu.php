@@ -9,13 +9,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="<?php echo base_url('admin/login');?>" class="navbar-brand" style="color:#428bca;">Clasificom</a>
+			<a href="<?php echo base_url('admin/login');?>" class="navbar-brand" style="color:#FFFFFF; font-weight:bold; text-decoration:underline;">
+				eAsYpaSs
+			</a>
 		</div>
 		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 			<div align="right" >
 				<br />
-				<a class="btn-success btn" href="<?php echo base_url('admin/solicitudes/listar');?>">Buscar Accesos</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a class="btn-info btn" href="<?php echo base_url('admin/usuarios');?>">Crear Nuevo Acceso</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="btn-success btn" href="<?php echo base_url('claves/buscar');?>">Buscar Accesos</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="btn-info btn" href="<?php echo base_url('claves/agregar');?>">Crear Nuevo Acceso</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<a style="float:right;" class="btn-danger btn" href="<?php echo base_url('admin/login/close');?>">Cerrar Sesión</a>
 			</div>
 			<br />
@@ -35,8 +37,15 @@
 						<li><br /></li>
 						<li	class="<?php if(strtolower($this->router->fetch_module()) == 'usuarios') echo 'active';?> active">
 							<a	href="<?php echo base_url('admin/usuarios/listar');?>">ACCESOS</a>
+							<ul class="nav">
+								<li class="<?php if((strtolower($this->router->fetch_module()) == 'usuarios') and strtolower($this->router->fetch_method()) == 'listar') echo 'active';?>">
+									<a href="<?php echo base_url('claves/buscar');?>">Buscar</a>
+								</li>
+								<li class="<?php if((strtolower($this->router->fetch_module()) == 'usuarios') and strtolower($this->router->fetch_method()) == 'alta') echo 'active';?>">
+									<a href="<?php echo base_url('claves/agregar');?>">Crear</a>
+								</li>
+							</ul>
 						</li>
-						<li><br /></li>
 						<li	class="<?php if(strtolower($this->router->fetch_module()) == 'usuarios') echo 'active';?> active">
 							<a	href="<?php echo base_url('categorias/listar');?>">Categorias</a>
 							<ul class="nav">

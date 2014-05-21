@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="AllyTech Desarrollo">
     <link rel="shortcut icon" hrlogo-agimedef="<?php echo ASSETS;?>ico/favicon.png">
-    <title><?php echo $title;?></title>
+    <title>eAsYpaSs</title>
 
 
 
@@ -88,7 +88,5 @@
       .chosen-rtl .chosen-drop { left: -9000px; }
     </style>
 
-    <!-- Recolector de incidencias -->
-    <script type="text/javascript" src="http://jira.allytech.com/s/d41d8cd98f00b204e9800998ecf8427e/es_ESvh6qat-1988229788/6144/4/1.4.0-m6/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=93c84ce5"></script>
  </head>
  <body>

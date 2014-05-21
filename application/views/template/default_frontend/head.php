@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="AllyTech Desarrollo">
     <link rel="shortcut icon" hrlogo-agimedef="<?php echo ASSETS;?>ico/favicon.png">
-    <title><?php echo $title;?></title>
+    <title>eAsYpaSs</title>
 
 
 

@@ -10,4 +10,4 @@ $config['default_template_layout_frontend'] = 'default_frontend/';
 $config['template_user_backend'] = 'user_backend/';
 
 //Default head title text
-$config['default_title'] = 'Clasificom';
+$config['default_title'] = 'eAsYpaSs';

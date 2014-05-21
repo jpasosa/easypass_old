@@ -11,7 +11,7 @@
 		<meta name="author" content="">
 		<link rel="shortcut icon" href="<?php echo ASSETS;?>ico/favicon.png">
 
-		<title><?php echo $this->config->item('default_title');?> :: Ingreso a la aplicación</title>
+		<title><?php echo $this->config->item('default_title');?> :: login</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="<?php echo PUBLIC_FOLDER;?>css/bootstrap.css" rel="stylesheet">
