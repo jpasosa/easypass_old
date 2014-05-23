@@ -5,42 +5,16 @@
 
 	<!-- ERRORES -->
 	<br />
-	<?php if (count($errores_validacion) > 0): ?>
-		<div class="alert alert-danger">
-			<?php foreach ($errores_validacion AS $err): ?>
-				<?php echo $err; ?><br />
-			<?php endforeach; ?>
-		</div>
-	<?php endif; ?>
+	<?php foreach ($errores_validacion AS $err): ?>
+		<span style="color: red;"><?php echo $err; ?></span><br />
+	<?php endforeach; ?>
+
 
 	<form method="post" action="<?php echo $url_action; ?>" enctype="multipart/form-data" role="form" autocomplete="off" id="my-form" class="bs-docs-container" >
 		<div id="home">
 			<div class="form-group">
-				<label for="nombre"> Precio Limite (200km) </label>
-				<input type="text" class="form-control custom-input-lg" name="precio_limite" id="precio" placeholder="Ingrese el precio limite" value="<?php echo $categoria['precio_limite']?>">
-			</div>
-
-			<div class="form-group">
-				<label for="nombre"> Precio Ilimitado</label>
-				<input type="text" class="form-control custom-input-lg" name="precio_ilimitado" id="precio" placeholder="Ingrese el precio ilimitado" value="<?php echo $categoria['precio_ilimitado']?>">
-			</div>
-
-
-			<div class="form-group">
-				<label for="nombre">Nombre Ingles</label>
-				<input type="text" class="form-control custom-input-lg" name="nombre_en" id="marca" placeholder="Ingrese el nombre en Ingles" value="<?php echo $categoria['nombre_en']?>">
-			</div>
-			<div class="form-group">
-				<label for="nombre">Nombre Español</label>
-				<input type="text" class="form-control custom-input-lg" name="nombre_es" id="marca" placeholder="Ingrese el nombre en Español" value="<?php echo $categoria['nombre_es']?>">
-			</div>
-
-			<div class="form-group">
-				<label for="nombre">Estado</label>
-				<select class="form-control custom-input-lg" name="estado" id="estado" placeholder="estado de la categoria" >
-					<option value="0" <?php if ($categoria['estado'] == 0): echo 'selected="selected"';endif; ?> >Inactivo</option>
-					<option value="1" <?php if ($categoria['estado'] == 1): echo 'selected="selected"';endif; ?> >Activo</option>
-				</select>
+				<label for="nombre">Nombre</label>
+				<input type="text" class="form-control custom-input-lg" name="nombre" id="marca" placeholder="Ingrese el nombre" value="<?php echo $categoria['nombre']?>">
 			</div>
 
 			<?php if(isset($categoria['id_categoria'])):?>

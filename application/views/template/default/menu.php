@@ -18,7 +18,7 @@
 				<br />
 				<a class="btn-success btn" href="<?php echo base_url('claves/buscar');?>">Buscar Accesos</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<a class="btn-info btn" href="<?php echo base_url('claves/agregar');?>">Crear Nuevo Acceso</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a style="float:right;" class="btn-danger btn" href="<?php echo base_url('admin/login/close');?>">Cerrar Sesión</a>
+				<a style="float:right;" class="btn-danger btn" href="<?php echo base_url('login/close');?>">Cerrar Sesión</a>
 			</div>
 			<br />
 		</nav>

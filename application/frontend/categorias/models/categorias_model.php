@@ -29,14 +29,16 @@ class Categorias_model extends CI_Model
 
 
 	/**
-	 * Inserto una categoría
+	 * Inserto una categoría, a la vez también inserta como un tag
 	 **/
 	public function insert($categoria)
 	{
 		try {
+
 			$this->db->insert('categorias', $categoria);
 			if ($this->db->affected_rows()) {
 				$id_insert = $this->db->insert_id();
+				$this->db->insert('tags', array('nombre_tag'=>$categoria['nombre']));
 				return $id_insert;
 			} else {
 				return 0;

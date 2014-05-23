@@ -31,6 +31,7 @@ class Claves extends MY_Controller {
 
 
 
+
 	public function agregar()
 	{
 		if(!$this->user->is_logged())       redirect('login');
@@ -144,15 +145,16 @@ class Claves extends MY_Controller {
 		{
 			$words_search['words'] 		= $this->input->post('palabras');
 			$words_search['id_categoria']	= $this->input->post('id_categoria');
-			$busqueda 	= $this->claves_model->search($words_search);
+			$busqueda 	= $this->claves_model->simpleSearch($words_search);
 		} else { // Viene por get
 			redirect('claves/buscar');
 		}
 
-		$data['form_action'] = base_url('claves/buscar');
-		$categorias 		= $this->categorias_model->getCategorias();
-		$data['categorias'] 	= $categorias;
-		$data['view_file'] 	= 'buscar_clave';
+		$data['claves_encontradas'] = $busqueda;
+		$data['form_action'] 	= base_url('claves/buscar');
+		$categorias 			= $this->categorias_model->getCategorias();
+		$data['categorias'] 		= $categorias;
+		$data['view_file'] 		= 'claves_encontradas';
 
 		$this->load->view('template',$data);
 

@@ -97,7 +97,7 @@ class Login extends MY_Controller_Front {
 				$this->user->init($my_data);
 
 				$this->session->set_userdata($my_data);
-				redirect('panel');
+				redirect('claves/buscar');
 			}
 			else {
 				$this->error['error_login'] = true;
