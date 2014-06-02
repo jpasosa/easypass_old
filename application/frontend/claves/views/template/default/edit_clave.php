@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="bs-docs-container">
-	<a class="lead" id="desplegar-form">Alta de un Acceso</a>
+	<a class="lead" id="desplegar-form">Edición de un Acceso</a>
 
 	<!-- ERRORES -->
 	<br />
@@ -143,8 +143,7 @@
 	// 	'.chosen-select'           : {},
 	// 	'.chosen-select-deselect'  : {allow_single_deselect:true},
 	// 	'.chosen-select-no-single' : {disable_search_threshold:10},
-	// 	'.chosen-select-no-results': {no_results_text:'No pudimos encontrar nada!'},
-	// 	'.chosen-select-search': {search_contains: true},
+	// 	'.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
 	// 	'.chosen-select-width'     : {width:"95%"}
 	// }
 	// for (var selector in config) {
