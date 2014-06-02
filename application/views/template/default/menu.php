@@ -68,6 +68,17 @@
 								</li>
 							</ul>
 						</li>
+						<li	class="<?php if(strtolower($this->router->fetch_module()) == 'emails') echo 'active';?> active">
+							<a	href="<?php echo base_url('admin/emails');?>">Emails</a>
+							<ul class="nav">
+								<li class="<?php if((strtolower($this->router->fetch_module()) == 'emails') and strtolower($this->router->fetch_method()) == 'listar') echo 'active';?>">
+									<a href="<?php echo base_url('emails/listar');?>">Listar</a>
+								</li>
+								<li class="<?php if((strtolower($this->router->fetch_module()) == 'emails') and strtolower($this->router->fetch_method()) == 'alta') echo 'active';?>">
+									<a href="<?php echo base_url('emails/agregar');?>">Crear</a>
+								</li>
+							</ul>
+						</li>
 					</ul>
 			</div>
 		</div>
