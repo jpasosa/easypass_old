@@ -14,7 +14,7 @@
 		<div id="home">
 			<div class="form-group">
 				<label for="nombre">Nombre</label>
-				<input type="text" class="form-control custom-input-lg" name="nombre_tag" id="marca" placeholder="Ingrese el nombre" value="<?php echo $tag['nombre_tag']?>">
+				<input type="text" class="form-control custom-input-lg" name="nombre_tag" id="nombre_tag" placeholder="Ingrese el nombre. Una sola pabra seguida." value="<?php echo $tag['nombre_tag']?>">
 			</div>
 
 			<?php if(isset($tag['id_tag'])):?>
@@ -36,6 +36,17 @@
 			console.log(id);
 		});
 	});
+
+	$("#nombre_tag").keydown(function (e)
+	{
+	     if (e.keyCode == 32)
+	     {
+	       $(this).val($(this).val() + "-"); // append '-' to input
+	       return false; // return false to prevent space from being added
+	     }
+	});
+
+
 </script>
 
 
@@ -47,7 +58,8 @@
 		'.chosen-select'           : {},
 		'.chosen-select-deselect'  : {allow_single_deselect:true},
 		'.chosen-select-no-single' : {disable_search_threshold:10},
-		'.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+		'.chosen-select-no-results': {no_results_text:'No pudimos encontrar nada!'},
+		'.chosen-select-search-contains': {search_contains: true},
 		'.chosen-select-width'     : {width:"95%"}
 	}
 	for (var selector in config) {

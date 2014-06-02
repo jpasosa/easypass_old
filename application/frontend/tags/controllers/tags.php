@@ -12,7 +12,6 @@ class Tags extends MY_Controller {
 		$this->load->model('tags/tags_model');
 		//Carga de clases de Equipos
 		//$this->load->library('categoria');
-
 	}
 
 

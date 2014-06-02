@@ -14,7 +14,7 @@
 		<div id="home">
 			<div class="form-group">
 				<label for="nombre">Nombre</label>
-				<input type="text" class="form-control custom-input-lg" name="nombre_tag" id="marca" placeholder="Ingrese el nombre" value="<?php echo $tag['nombre_tag']?>">
+				<input type="text" class="form-control custom-input-lg" name="nombre_tag" id="nombre_tag" placeholder="Ingrese el nombre" value="<?php echo $tag['nombre_tag']?>">
 			</div>
 
 			<?php if(isset($tag['id_tag'])):?>
@@ -35,6 +35,15 @@
 			var id = $(this).data('id');
 			console.log(id);
 		});
+	});
+
+	$("#nombre_tag").keydown(function (e)
+	{
+	     if (e.keyCode == 32)
+	     {
+	       $(this).val($(this).val() + "-"); // append '-' to input
+	       return false; // return false to prevent space from being added
+	     }
 	});
 </script>
 

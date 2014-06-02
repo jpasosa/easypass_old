@@ -20,7 +20,8 @@ class Tags_model extends CI_Model
 
 		$errores = array();
 
-		if($tag['nombre_tag'] == '') {
+		if($tag['nombre_tag'] == '')
+		{
 			$errores['nombre_tag'] = 'Debe ingresar el nombre';
 		}
 
@@ -34,6 +35,10 @@ class Tags_model extends CI_Model
 	public function insert($tag)
 	{
 		try {
+
+
+			$tag['nombre_tag'] = ' ' . $tag['nombre_tag'];
+
 			$this->db->insert('tags', $tag);
 			if ($this->db->affected_rows()) {
 				$id_insert = $this->db->insert_id();
@@ -72,6 +77,13 @@ class Tags_model extends CI_Model
 	public function update($tag, $id_tag)
 	{
 		try {
+
+
+			// Controlo a ver si tiene el espacio adelante.
+			$first_char = substr($tag['nombre_tag'], 0, 1);
+			if ( $first_char != ' ') {
+				$tag['nombre_tag'] = ' ' . $tag['nombre_tag'];
+			}
 
 			$this->db->where('id_tag', $id_tag);
 			$this->db->update('tags', $tag);
